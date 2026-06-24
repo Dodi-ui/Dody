@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Esshak — Engineer · Musician · Builder | Qena, Egypt</title>
+  <meta name="description" content="Daniel Esshak Asaad — Computer Science student from Qena, Egypt. Co-founder of Medicyle AI, TEDx IT Lead, pianist & drummer with 13 years of music. Applying Fall 2026." />
+  <meta name="keywords" content="Daniel Esshak, Qena Egypt, CS student, Medicyle, TEDx, pianist, drummer, software engineer, AI, portfolio" />
+  <meta name="author" content="Daniel Esshak Asaad" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Daniel Esshak — Engineer · Musician · Builder" />
+  <meta property="og:description" content="CS student from Qena, Egypt. Building AI tools, playing drums for thousands, architecting paths forward." />
+  <meta property="og:url"         content="https://dodi-ui.github.io/Dody/" />
+  <meta property="og:locale"      content="en_US" />
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:title"       content="Daniel Esshak — Engineer · Musician · Builder" />
+  <meta name="twitter:description" content="CS student from Qena, Egypt. Co-founder of Medicyle AI · TEDx IT Lead · Pianist & Drummer." />
+  <link rel="canonical" href="https://dodi-ui.github.io/Dody/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURTAINS -->
+  <div class="curtain curtain-left"  id="curtainLeft"></div>
+  <div class="curtain curtain-right" id="curtainRight"></div>
+
+  <!-- LOADER -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-deco loader-deco--tl"></div>
+      <div class="loader-deco loader-deco--br"></div>
+      <div class="loader-beats">
+        <span class="beat" id="b1">TAK</span><span class="beat-dot">.</span>
+        <span class="beat" id="b2">TAK</span><span class="beat-dot">.</span>
+        <span class="beat" id="b3">TAK</span><span class="beat-dot">.</span>
+      </div>
+      <div class="loader-arabic-wrap" id="loaderArabic">
+        <span class="loader-arabic" id="loaderArabicText"></span>
+        <span class="loader-arabic-cursor" id="loaderCursor">|</span>
+      </div>
+      <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+      <p class="loader-sub">Loading Daniel Esshak</p>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <a href="#hero" class="nav-logo" id="navLogo">
+      <span class="logo-state logo-abbr">DE</span>
+      <span class="logo-state logo-fullname">Daniel Esshak</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"      class="nav-link" data-i18n="nav.about">About</a></li>
+      <li><a href="#qena"       class="nav-link" data-i18n="nav.qena">Qena</a></li>
+      <li><a href="#story"      class="nav-link" data-i18n="nav.story">Story</a></li>
+      <li><a href="#projects"   class="nav-link" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#music"      class="nav-link" data-i18n="nav.music">Music</a></li>
+      <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="#honors"     class="nav-link" data-i18n="nav.honors">Honors</a></li>
+      <li><a href="#contact"    class="nav-link nav-cta" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <!-- Translate -->
+      <button class="translate-btn" id="translateBtn" aria-label="Translate to Arabic" title="Translate">
+        <span class="translate-icon">&#x1F310;</span>
+        <span class="translate-label" id="translateLabel" data-i18n="nav.translate">عربي</span>
+      </button>
+      <!-- Mode indicator + toggle -->
+      <div class="theme-mode-wrap">
+        <span class="theme-mode-label" id="themeModeLabel">DARK</span>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <img src="qena_night.png" alt="Qena night sky" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+      <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    </div>
+    <div class="hero-deco-lines">
+      <svg class="hero-deco-svg hero-deco-svg--1" viewBox="0 0 400 400" fill="none">
+        <path d="M 380,10 C 300,10 80,60 10,380" stroke="#c9a96e" stroke-width="0.9" stroke-linecap="round" opacity="0.32"/>
+        <path d="M 380,50 C 310,50 110,95 40,380" stroke="#c9a96e" stroke-width="0.45" stroke-linecap="round" opacity="0.16"/>
+      </svg>
+      <svg class="hero-deco-svg hero-deco-svg--2" viewBox="0 0 400 400" fill="none">
+        <path d="M 20,390 C 100,390 320,340 390,20" stroke="#c9a96e" stroke-width="0.9" stroke-linecap="round" opacity="0.32"/>
+        <path d="M 20,350 C 90,350 300,305 360,20" stroke="#c9a96e" stroke-width="0.45" stroke-linecap="round" opacity="0.16"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <div class="hero-portrait-wrap">
+        <div class="hero-portrait-frame">
+          <img src="daniel_portrait.png" alt="Daniel Esshak" class="hero-portrait" />
+        </div>
+        <div class="hero-portrait-ring"></div>
+        <div class="hero-portrait-ring hero-portrait-ring--2"></div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-eyebrow hero-arabic-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span class="hero-arabic-text" dir="rtl">من قنا إلى العالم</span>
+        </p>
+        <h1 class="hero-name">
+          <span class="hero-name-line">Daniel</span>
+          <em class="hero-name-line hero-name-accent">Esshak</em>
+        </h1>
+        <p class="hero-tagline">
+          <span data-i18n="hero.tagline.0">Engineer</span>
+          <span class="tag-sep">·</span>
+          <span data-i18n="hero.tagline.1">Musician</span>
+          <span class="tag-sep">·</span>
+          <span data-i18n="hero.tagline.2">Builder</span>
+        </p>
+        <p class="hero-sub" data-i18n="hero.sub">Computer Science &amp; AI · 13 Years of Music · Qena, Egypt</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.work">View My Work</a>
+          <a href="#contact"  class="btn btn-ghost"   data-i18n="hero.cta.contact">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-dot"></div>
+    </a>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-intro">
+        <p class="about-manifesto" data-i18n-html="about.manifesto">
+          I'm a technologist and musician who cares about <em>making tools that give people back their time</em> — connecting cultures through sound, and architecting paths forward when resources are lean.
+        </p>
+      </div>
+      <div class="about-values">
+        <div class="value-item">
+          <span class="value-num">01</span>
+          <span class="value-word" data-i18n="about.value.0">RESILIENT</span>
+          <span class="value-line"></span>
+        </div>
+        <div class="value-item">
+          <span class="value-num">02</span>
+          <span class="value-word" data-i18n="about.value.1">RESOURCEFUL</span>
+          <span class="value-line"></span>
+        </div>
+        <div class="value-item">
+          <span class="value-num">03</span>
+          <span class="value-word" data-i18n="about.value.2">RHYTHMIC</span>
+          <span class="value-line"></span>
+        </div>
+        <div class="value-item">
+          <span class="value-num">04</span>
+          <span class="value-word" data-i18n="about.value.3">RIGOROUS</span>
+          <span class="value-line"></span>
+        </div>
+      </div>
+      <div class="about-body">
+        <div class="about-col">
+          <div class="about-typewriter" id="aboutTypewriter">
+            <p class="tw-para" data-i18n-tw="about.tw.0" data-tw="Growing up in Qena, Upper Egypt, I built my path with two classmates, one laptop, and lessons downloaded overnight through a phone hotspot. Limitations became my creative curriculum."></p>
+            <p class="tw-para" data-i18n-tw="about.tw.1" data-tw="My parents — a veterinarian with 21 years of government service and a pulmonologist who built her own clinic from scratch — showed me that leadership is not about volume. It's about showing up, quietly, at the exact second someone needs you."></p>
+            <p class="tw-para" data-i18n-tw="about.tw.2" data-tw='Today I write code, play drums for thousands, and lead teams through crises — all from the same philosophy: "I don&apos;t need the solo. I want the song to work."'></p>
+          </div>
+        </div>
+        <div class="about-col">
+          <div class="about-stats">
+            <div class="stat" data-count="96" data-suffix="/100">
+              <span class="stat-num">96<small>/100</small></span>
+              <span class="stat-label" data-i18n="about.stat.gpa">GPA</span>
+            </div>
+            <div class="stat" data-count="13" data-suffix="yrs">
+              <span class="stat-num">13<small>yrs</small></span>
+              <span class="stat-label" data-i18n="about.stat.music">Music</span>
+            </div>
+            <div class="stat" data-count="5" data-suffix="K+">
+              <span class="stat-num">5<small>K+</small></span>
+              <span class="stat-label" data-i18n="about.stat.code">Lines of Code</span>
+            </div>
+            <div class="stat" data-count="30" data-suffix="K+">
+              <span class="stat-num">30<small>K+</small></span>
+              <span class="stat-label" data-i18n="about.stat.lives">Lives Reached</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QENA SECTION ═══ -->
+  <section id="qena" class="qena-section">
+    <div class="qena-img-wrap">
+      <img src="qena_night.png" alt="Qena, Upper Egypt at night" class="qena-img" loading="lazy" />
+      <div class="qena-gradient-overlay"></div>
+    </div>
+    <div class="container qena-body">
+      <div class="qena-left">
+        <div class="qena-eyebrow" data-i18n="qena.label">Upper Egypt</div>
+        <h2 class="qena-title" data-i18n="qena.title">قنا / Qena</h2>
+        <p class="qena-desc" data-i18n="qena.desc">A governorate of 3.3 million on the Nile's west bank. 700 km south of Cairo. Home to the Temple of Hathor, the fertile Nile valley, and the quiet determination that shaped Daniel's path from resource-scarce streets to international stages.</p>
+        <blockquote class="qena-quote" data-i18n="qena.quote">"Every limitation Qena gave me, I turned into an architecture."</blockquote>
+      </div>
+      <div class="qena-right">
+        <div class="qena-facts">
+          <div class="qf-item" data-scroll-reveal>
+            <span class="qf-val">3.3M</span>
+            <span class="qf-label" data-i18n="qena.fact.population">Population</span>
+          </div>
+          <div class="qf-item" data-scroll-reveal>
+            <span class="qf-val">700km</span>
+            <span class="qf-label" data-i18n="qena.fact.cairo">From Cairo</span>
+          </div>
+          <div class="qf-item" data-scroll-reveal>
+            <span class="qf-val">3,000+</span>
+            <span class="qf-label" data-i18n="qena.fact.history">Years of History</span>
+          </div>
+          <div class="qf-item" data-scroll-reveal>
+            <span class="qf-val">1</span>
+            <span class="qf-label" data-i18n="qena.fact.builder">Young Architect</span>
+          </div>
+        </div>
+        <div class="qena-timeline-note" data-i18n="qena.note">
+          Where the Nile bends south — and a builder was born.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STORY ═══ -->
+  <section id="story" class="story section">
+    <div class="story-bg">
+      <img src="qena_night.png" alt="Upper Egypt" class="story-bg-img" loading="lazy" />
+      <div class="story-bg-overlay"></div>
+    </div>
+    <div class="container story-grid">
+      <div class="story-left">
+        <div class="section-label" data-i18n="story.label">The Architecture of Resilience</div>
+        <h2 class="section-title" data-i18n-html="story.title">From Qena<br/>to the World</h2>
+        <blockquote class="story-quote" data-i18n="story.quote">"Resilience is not merely surviving; it is architecting a path forward when resources are lean."</blockquote>
+      </div>
+      <div class="story-right">
+        <div class="story-timeline">
+          <div class="timeline-item" data-scroll-reveal>
+            <div class="tl-icon">01</div>
+            <div class="tl-content">
+              <h3 class="tl-title" data-i18n="story.tl.0.title">No local tech programs</h3>
+              <p class="tl-desc" data-i18n="story.tl.0.desc">Formed a coding group with two classmates and one shared laptop. Downloaded lessons overnight via phone hotspot when internet failed.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-scroll-reveal>
+            <div class="tl-icon">02</div>
+            <div class="tl-content">
+              <h3 class="tl-title" data-i18n="story.tl.1.title">Lockdown → 600+ hours of learning</h3>
+              <p class="tl-desc" data-i18n="story.tl.1.desc">5–6 hours daily self-study. 15 online courses. 70+ coding challenges. 2 apps built. 1,000+ hours on piano. I turned uncertainty into structure.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-scroll-reveal>
+            <div class="tl-icon">03</div>
+            <div class="tl-content">
+              <h3 class="tl-title" data-i18n="story.tl.2.title">Built platforms from scratch</h3>
+              <p class="tl-desc" data-i18n="story.tl.2.desc">No marketing team, no studio, no incubator — just discipline, a laptop, and a vision of what tools could do for people.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-scroll-reveal>
+            <div class="tl-icon">04</div>
+            <div class="tl-content">
+              <h3 class="tl-title" data-i18n="story.tl.3.title">12,000+ handwritten exercises</h3>
+              <p class="tl-desc" data-i18n="story.tl.3.desc">Across five Cambridge subjects — averaging 96% across them all, without a tutor or exam prep centre.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" data-i18n="projects.label">Technical Stewardship</div>
+        <h2 class="section-title" data-i18n="projects.title">Selected Work</h2>
+        <p class="section-sub" data-i18n="projects.sub">Things that shouldn't work but do.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card project-card--featured" data-scroll-reveal>
+          <div class="project-card-inner">
+            <div class="project-left">
+              <div class="project-meta">
+                <span class="project-tag">AI / Full Stack</span>
+                <span class="project-tag project-tag--gold">NextEra Finalist</span>
+              </div>
+              <h3 class="project-name">Medicyle</h3>
+              <p class="project-role" data-i18n="projects.medicyle.role">Co-Founder &amp; Lead Developer</p>
+              <div class="project-stack">
+                <span class="stack-chip">AI/ML</span><span class="stack-chip">Full Stack</span>
+                <span class="stack-chip">Python</span><span class="stack-chip">NextEra</span>
+              </div>
+              <a href="https://medicycle.me" target="_blank" rel="noopener" class="project-link">Visit Medicycle.me <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+            <div class="project-right">
+              <p class="project-desc" data-i18n="projects.medicyle.desc">AI-powered medication redistribution platform: <em>"What do we do with medicine that shouldn't be wasted and can't be sold?"</em> Simplified pharmacist handoffs. Optimized delivery. Reduced waste by 30%.</p>
+              <div class="project-metrics">
+                <div class="metric"><span class="metric-val">5,000+</span><span class="metric-label" data-i18n="projects.metric.lines">Lines of code</span></div>
+                <div class="metric"><span class="metric-val">100</span><span class="metric-label" data-i18n="projects.metric.users">Users tested</span></div>
+                <div class="metric"><span class="metric-val">30%</span><span class="metric-label" data-i18n="projects.metric.waste">Waste cut</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-scroll-reveal>
+          <div class="project-card-inner project-card-inner--sm">
+            <div class="project-meta"><span class="project-tag">Python / Automation</span></div>
+            <h3 class="project-name" data-i18n="projects.zoom.name">Zoom Attendance Analyzer</h3>
+            <p class="project-role" data-i18n="projects.zoom.role">Developer — Personal Project</p>
+            <p class="project-desc" data-i18n="projects.zoom.desc">Built for a teacher drowning in Zoom logs. Scrapes attendance, flags absences, resolves duplicates. <em>It wasn't flashy. It was timing.</em></p>
+            <div class="project-metrics"><div class="metric"><span class="metric-val">150+</span><span class="metric-label" data-i18n="projects.zoom.metric">Hours saved/year</span></div></div>
+            <div class="project-stack"><span class="stack-chip">Python</span><span class="stack-chip">Pandas</span><span class="stack-chip">FuzzyWuzzy</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-scroll-reveal>
+          <div class="project-card-inner project-card-inner--sm">
+            <div class="project-meta"><span class="project-tag">Full Stack</span></div>
+            <h3 class="project-name" data-i18n="projects.sunbright.name">Sun Bright Marketplace</h3>
+            <p class="project-role" data-i18n="projects.sunbright.role">Full Stack Developer</p>
+            <p class="project-desc" data-i18n="projects.sunbright.desc">Digital marketplace connecting local farmers in Upper Egypt. 60+ users before any marketing. 40% trade boost in month one.</p>
+            <div class="project-stack"><span class="stack-chip">Full Stack</span><span class="stack-chip">Web Dev</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-scroll-reveal>
+          <div class="project-card-inner project-card-inner--sm">
+            <div class="project-meta"><span class="project-tag">Leadership</span></div>
+            <h3 class="project-name">TEDxYouth @NEIS</h3>
+            <p class="project-role" data-i18n="projects.tedx.role">Head IT Committee</p>
+            <p class="project-desc" data-i18n="projects.tedx.desc">Led 16-member IT team for a licensed TED event. 2 websites, 2,000+ registrations, real-time crisis management. 70% efficiency gain.</p>
+            <div class="project-stack"><span class="stack-chip">Web Dev</span><span class="stack-chip">Leadership</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-scroll-reveal>
+          <div class="project-card-inner project-card-inner--sm">
+            <div class="project-meta"><span class="project-tag">Web Design</span></div>
+            <h3 class="project-name" data-i18n="projects.gouda.name">Dr. Gouda's Math Portal</h3>
+            <p class="project-role" data-i18n="projects.gouda.role">Designer &amp; Developer</p>
+            <p class="project-desc" data-i18n="projects.gouda.desc">Educational web portal for a mathematics teacher — clean, accessible, beautifully designed.</p>
+            <div class="project-stack"><span class="stack-chip">HTML/CSS/JS</span><span class="stack-chip">UI/UX</span></div>
+            <a href="https://dodi-ui.github.io/Math-Site-2/" target="_blank" rel="noopener" class="project-link">Visit Site <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MUSIC ═══ -->
+  <section id="music" class="music section section--dark">
+    <div class="music-bg">
+      <img src="music_atmosphere.png" alt="Music" class="music-bg-img" loading="lazy" />
+      <div class="music-bg-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label section-label--light" data-i18n="music.label">The Rhythm of Discipline</div>
+        <h2 class="section-title section-title--light" data-i18n="music.title">13 Years of Rhythm</h2>
+        <blockquote class="music-hero-quote" data-i18n="music.quote">"The drummer is the unseen leader. If I lose focus, the entire performance collapses."</blockquote>
+      </div>
+      <div class="music-grid">
+        <div class="music-card" data-scroll-reveal>
+          <div class="music-card-header"><span class="music-card-icon">♪</span><div><h3 class="music-card-title" data-i18n="music.piano.title">Piano</h3><p class="music-card-years">13 Years</p></div></div>
+          <ul class="music-card-facts">
+            <li data-i18n="music.piano.f0">Self-taught via traditional Arabic hymnody</li>
+            <li data-i18n="music.piano.f1">1,000+ total practice hours</li>
+            <li data-i18n="music.piano.f2">200+ pieces mastered</li>
+            <li data-i18n="music.piano.f3">Invited to perform at the Opera House</li>
+            <li data-i18n="music.piano.f4">Mentored 10 beginners in music theory</li>
+          </ul>
+        </div>
+        <div class="music-card" data-scroll-reveal>
+          <div class="music-card-header"><span class="music-card-icon">◉</span><div><h3 class="music-card-title" data-i18n="music.drums.title">Drums</h3><p class="music-card-years">6 Years</p></div></div>
+          <ul class="music-card-facts">
+            <li data-i18n="music.drums.f0">500+ services across 30+ cities</li>
+            <li data-i18n="music.drums.f1">12 hymns produced (piano, drums, synth)</li>
+            <li data-i18n="music.drums.f2">20,000+ keynote audience reached</li>
+            <li data-i18n="music.drums.f3">First instrument: drum pad at age 9</li>
+          </ul>
+        </div>
+        <div class="music-card" data-scroll-reveal>
+          <div class="music-card-header"><span class="music-card-icon">⊞</span><div><h3 class="music-card-title" data-i18n="music.prod.title">Production</h3><p class="music-card-years">Studio &amp; Digital</p></div></div>
+          <ul class="music-card-facts">
+            <li>FL Studio &amp; Audacity</li>
+            <li data-i18n="music.prod.f1">Multi-track recording &amp; mixing</li>
+            <li data-i18n="music.prod.f2">Digital mastering</li>
+            <li>10,000+ SoundCloud streams</li>
+          </ul>
+        </div>
+      </div>
+      <div class="music-metrics">
+        <div class="music-metric" data-count="10" data-suffix="K+" data-scroll-reveal><span class="mm-val">10K+</span><span class="mm-label" data-i18n="music.m0">SoundCloud Streams</span></div>
+        <div class="music-metric" data-count="30" data-suffix="K+" data-scroll-reveal><span class="mm-val">30K+</span><span class="mm-label" data-i18n="music.m1">Total Audience</span></div>
+        <div class="music-metric" data-count="12" data-suffix="" data-scroll-reveal><span class="mm-val">12</span><span class="mm-label" data-i18n="music.m2">Hymns Produced</span></div>
+        <div class="music-metric" data-count="500" data-suffix="+" data-scroll-reveal><span class="mm-val">500+</span><span class="mm-label" data-i18n="music.m3">Live Services</span></div>
+      </div>
+      <div class="music-links">
+        <a href="https://www.instagram.com/selah_worship_lord/" target="_blank" rel="noopener" class="music-ext-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @selah_worship_lord
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section id="experience" class="experience section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" data-i18n="exp.label">Navigational Leadership</div>
+        <h2 class="section-title" data-i18n="exp.title">Experience</h2>
+      </div>
+      <div class="exp-timeline">
+        <div class="exp-item" data-scroll-reveal><div class="exp-year-col"><span class="exp-year">Gr. 10</span></div><div class="exp-connector"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-card"><div class="exp-role" data-i18n="exp.0.role">Co-Founder &amp; Lead Developer</div><div class="exp-org">Medicyle App</div><div class="exp-detail">6 hrs/week · 40 wks/yr · NextEra Finalist</div><p class="exp-desc" data-i18n="exp.0.desc">"Building AI that redistributes hope."</p></div></div>
+        <div class="exp-item" data-scroll-reveal><div class="exp-year-col"><span class="exp-year">Gr. 10–11</span></div><div class="exp-connector"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-card"><div class="exp-role" data-i18n="exp.1.role">Head IT Committee</div><div class="exp-org">TEDxYouth @NEIS</div><div class="exp-detail">8 hrs/week · 38 wks/yr</div><p class="exp-desc" data-i18n="exp.1.desc">"Managing the digital heartbeat of ideas."</p></div></div>
+        <div class="exp-item" data-scroll-reveal><div class="exp-year-col"><span class="exp-year">Gr. 10–11</span></div><div class="exp-connector"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-card"><div class="exp-role" data-i18n="exp.2.role">Full Stack Developer</div><div class="exp-org">Sun Bright Institution</div><div class="exp-detail">15 hrs/week · 10 wks/yr</div><p class="exp-desc" data-i18n="exp.2.desc">"3,000+ lines, 60+ users, 40% trade boost."</p></div></div>
+        <div class="exp-item" data-scroll-reveal><div class="exp-year-col"><span class="exp-year">Gr. 9–12</span></div><div class="exp-connector"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-card"><div class="exp-role" data-i18n="exp.3.role">Worship Musician</div><div class="exp-org">Youth Ministry</div><div class="exp-detail">10 hrs/week · 35 wks/yr</div><p class="exp-desc" data-i18n="exp.3.desc">"500+ services, 30+ cities."</p></div></div>
+        <div class="exp-item" data-scroll-reveal><div class="exp-year-col"><span class="exp-year">Gr. 9–10</span></div><div class="exp-connector"><div class="exp-dot"></div><div class="exp-line"></div></div><div class="exp-card"><div class="exp-role" data-i18n="exp.4.role">Math Club Leader</div><div class="exp-org">NIES</div><div class="exp-detail">4 hrs/week · 25 wks/yr</div><p class="exp-desc" data-i18n="exp.4.desc">"Led 20+ peers, improved scores 20%."</p></div></div>
+        <div class="exp-item" data-scroll-reveal><div class="exp-year-col"><span class="exp-year">Gr. 9</span></div><div class="exp-connector"><div class="exp-dot"></div></div><div class="exp-card"><div class="exp-role" data-i18n="exp.5.role">Community Volunteer</div><div class="exp-org">National Hospital, Qena</div><div class="exp-detail">2 hrs/week · 5 wks/yr</div><p class="exp-desc" data-i18n="exp.5.desc">"70+ homeless fed, 100+ elderly supported."</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HONORS ═══ -->
+  <section id="honors" class="honors section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" data-i18n="honors.label">Recognition</div>
+        <h2 class="section-title" data-i18n="honors.title">Honors &amp; Awards</h2>
+      </div>
+      <div class="honors-grid">
+        <div class="honor-card" data-scroll-reveal><div class="honor-level honor-level--intl">International</div><h3 class="honor-name">Duke of Edinburgh's Bronze Award</h3><p class="honor-desc">September 2024 · "Collaborative Resilience"</p></div>
+        <div class="honor-card" data-scroll-reveal><div class="honor-level honor-level--intl">International</div><h3 class="honor-name">Duolingo English — C1 Advanced</h3><p class="honor-desc">March 2026 · 130/160 · Speaking 145</p></div>
+        <div class="honor-card" data-scroll-reveal><div class="honor-level honor-level--comp">Competition</div><h3 class="honor-name">NextEra Competition — Finalist</h3><p class="honor-desc">Grade 10 · Medicyle App · AI-powered medication redistribution.</p></div>
+        <div class="honor-card" data-scroll-reveal><div class="honor-level honor-level--intl">International</div><h3 class="honor-name">Intel ISEF Participant</h3><p class="honor-desc">2022 · International Science and Engineering Fair.</p></div>
+        <div class="honor-card" data-scroll-reveal><div class="honor-level honor-level--school">Academic</div><h3 class="honor-name">CNIPE — 5 Outstanding Grades</h3><p class="honor-desc">June 2024 · Social Studies 91% · English 88%</p></div>
+        <div class="honor-card" data-scroll-reveal><div class="honor-level honor-level--school">Academic</div><h3 class="honor-name">Cambridge Pre-U Level 1</h3><p class="honor-desc">June 2025 · Math 95 · Biology 91 · Chemistry 90</p></div>
+        <div class="honor-card" data-scroll-reveal><div class="honor-level honor-level--school">School</div><h3 class="honor-name">Attestation d'Excellence — French</h3><p class="honor-desc">2024 · NEIS Qena · Grade 9, A2 Junior level.</p></div>
+        <div class="honor-card" data-scroll-reveal><div class="honor-level honor-level--natl">National</div><h3 class="honor-name">First Aid Certification</h3><p class="honor-desc">January 2024 · Qena · ID: 2024011714</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section id="testimonials" class="testimonials section section--alt">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <div class="section-label" data-i18n="testi.label">Voices of Trust</div>
+        <h2 class="section-title" data-i18n="testi.title">What They Say</h2>
+      </div>
+      <div class="testi-carousel" id="testiCarousel">
+        <div class="testi-track" id="testiTrack">
+          <div class="testi-slide active"><div class="testi-card"><div class="testi-open-quote">&ldquo;</div><blockquote class="testi-quote" data-i18n="testi.q0">Few students manage to leave such a consistent impression across so many years, but Dani has always stood out for his curiosity, determination, and resilience.</blockquote><footer class="testi-footer"><div class="testi-divider"></div><strong class="testi-name" data-i18n="testi.n0">School Principal</strong><span class="testi-org">Nile International Education System</span></footer></div></div>
+          <div class="testi-slide"><div class="testi-card"><div class="testi-open-quote">&ldquo;</div><blockquote class="testi-quote" data-i18n="testi.q1">Daniel has consistently redefined student leadership within our community through a unique blend of technical expertise, physical grit, and remarkable empathy.</blockquote><footer class="testi-footer"><div class="testi-divider"></div><strong class="testi-name">Abu Bakr Ali</strong><span class="testi-org">Principal / Cambridge Coordinator, NEIS</span></footer></div></div>
+          <div class="testi-slide"><div class="testi-card"><div class="testi-open-quote">&ldquo;</div><blockquote class="testi-quote" data-i18n="testi.q2">His ability to bridge this age gap — maintaining technical authority among older peers — speaks to a level of emotional intelligence and maturity rarely seen in a high school student.</blockquote><footer class="testi-footer"><div class="testi-divider"></div><strong class="testi-name">NEIS Leadership Team</strong><span class="testi-org">Nile Egyptian International Schools</span></footer></div></div>
+          <div class="testi-slide"><div class="testi-card"><div class="testi-open-quote">&ldquo;</div><blockquote class="testi-quote" data-i18n="testi.q3">Dani does not boast about his achievements; rather, he lets his actions speak for themselves. This quiet confidence is a quality that will serve him well.</blockquote><footer class="testi-footer"><div class="testi-divider"></div><strong class="testi-name">School Counselor</strong><span class="testi-org">Nile International Education System</span></footer></div></div>
+        </div>
+        <div class="testi-controls">
+          <button class="testi-btn" id="testiPrev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-btn" id="testiNext" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education" class="education section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" data-i18n="edu.label">Credentials</div>
+        <h2 class="section-title" data-i18n="edu.title">Education</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-main" data-scroll-reveal>
+          <div class="edu-school-name">Nile International Education System (NEIS)</div>
+          <div class="edu-school-detail">Cambridge International · Qena, Egypt</div>
+          <div class="edu-grad" data-i18n="edu.grad">Expected Graduation: June 2026 (Early — Grade 11)</div>
+          <div class="edu-gpa"><span class="edu-gpa-num">96</span><span class="edu-gpa-denom">/100</span><span class="edu-gpa-label">GPA</span></div>
+          <div class="edu-langs"><span class="lang-badge" data-i18n="edu.lang0">Arabic — Native</span><span class="lang-badge" data-i18n="edu.lang1">English — C1</span><span class="lang-badge" data-i18n="edu.lang2">French — Conv.</span></div>
+        </div>
+        <div class="edu-scores" data-scroll-reveal>
+          <div class="edu-scores-title">Cambridge Pre-U Level 1 · June 2025</div>
+          <div class="score-bars">
+            <div class="score-bar-row"><span class="score-subj" data-i18n="edu.s0">Mathematics</span><div class="score-bar-wrap"><div class="score-bar" style="--pct:95%"></div></div><span class="score-val">95</span></div>
+            <div class="score-bar-row"><span class="score-subj" data-i18n="edu.s1">Biology</span><div class="score-bar-wrap"><div class="score-bar" style="--pct:91%"></div></div><span class="score-val">91</span></div>
+            <div class="score-bar-row"><span class="score-subj" data-i18n="edu.s2">Chemistry</span><div class="score-bar-wrap"><div class="score-bar" style="--pct:90%"></div></div><span class="score-val">90</span></div>
+            <div class="score-bar-row"><span class="score-subj" data-i18n="edu.s3">Physics</span><div class="score-bar-wrap"><div class="score-bar" style="--pct:88%"></div></div><span class="score-val">88</span></div>
+            <div class="score-bar-row"><span class="score-subj" data-i18n="edu.s4">Arabic</span><div class="score-bar-wrap"><div class="score-bar" style="--pct:77%"></div></div><span class="score-val">77</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="edu-universities" data-scroll-reveal>
+        <div class="uni-label" data-i18n="edu.applying">Applying Fall 2026</div>
+        <div class="uni-list">
+          <span class="uni-badge">Colgate University</span>
+          <span class="uni-badge">Cornell University</span>
+          <span class="uni-badge">Carleton College</span>
+          <span class="uni-badge">Minerva University</span>
+          <span class="uni-badge">Haverford College</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="contact section section--dark">
+    <div class="container">
+      <div class="contact-header">
+        <div class="section-label section-label--light" data-i18n="contact.label">Let's Connect</div>
+        <h2 class="contact-title" data-i18n-html="contact.title">The Song Needs<br/>More Voices</h2>
+        <p class="contact-sub" data-i18n="contact.sub">Seeking Fall 2026 university opportunities. Open to research collaborations, mentorship, and conversations about technology and music.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="contact-info-item"><div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg></div><div><div class="ci-label" data-i18n="contact.email.label">Email</div><a href="mailto:danielesshak25@gmail.com" class="ci-value">danielesshak25@gmail.com</a></div></div>
+          <div class="contact-info-item"><div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="ci-label" data-i18n="contact.phone.label">Phone / WhatsApp</div><a href="tel:+201220505406" class="ci-value">+20 122 050 5406</a></div></div>
+          <div class="contact-info-item"><div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="ci-label" data-i18n="contact.location.label">Location</div><span class="ci-value" data-i18n="contact.location">Qena, Egypt</span></div></div>
+          <div class="contact-social">
+            <a href="https://www.instagram.com/selah_worship_lord/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://medicycle.me" target="_blank" rel="noopener" class="social-btn" aria-label="Medicyle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="contactName" class="form-label" data-i18n="form.name">Your Name</label><input type="text" id="contactName" name="name" class="form-input" placeholder="Jane Smith" required /></div>
+            <div class="form-group"><label for="contactEmail" class="form-label" data-i18n="form.email">Your Email</label><input type="email" id="contactEmail" name="email" class="form-input" placeholder="jane@university.edu" required /></div>
+          </div>
+          <div class="form-group"><label for="contactSubject" class="form-label" data-i18n="form.subject">Subject</label><input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Admissions / Collaboration / etc." required /></div>
+          <div class="form-group"><label for="contactMessage" class="form-label" data-i18n="form.message">Message</label><textarea id="contactMessage" name="message" class="form-input form-textarea" rows="5" placeholder="Tell me what's on your mind..." required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+            <span class="btn-text" data-i18n="form.submit">Send Message</span>
+            <span class="btn-sending" style="display:none" data-i18n="form.sending">Sending…</span>
+            <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess" style="display:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="form.success">Message sent! I'll get back to you soon.</span></div>
+          <div class="form-error" id="formError" style="display:none"><span data-i18n="form.error">Something went wrong. Email me directly:</span> <a href="mailto:danielesshak25@gmail.com">danielesshak25@gmail.com</a></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo">Daniel Esshak</div>
+        <p class="footer-tagline" data-i18n="footer.tagline">Engineer. Musician. Builder.</p>
+        <p class="footer-arabic">من قنا إلى العالم</p>
+      </div>
+      <div class="footer-right">
+        <img src="daniel_portrait.png" alt="Daniel Esshak" class="footer-portrait" loading="lazy" />
+        <p class="footer-seek" data-i18n="footer.seek">Currently seeking Fall 2026 university opportunities</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Daniel Esshak Asaad · Qena, Egypt</p>
+      <p class="footer-quote" data-i18n="footer.quote">"The rhythm will find you."</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL HINT -->
+  <div class="scroll-hint" id="scrollHint" aria-hidden="true">
+    <span class="scroll-hint-arrow">↓</span>
+    <span class="scroll-hint-text" id="scrollHintText">Scroll down</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
