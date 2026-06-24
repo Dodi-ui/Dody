@@ -20,3 +20,7 @@ npm-debug.log*
 # Temp
 *.tmp
 *.log
+
+# Local check scripts
+check_indexing.py
+run_checker.bat
