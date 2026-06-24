@@ -1,0 +1,117 @@
+name: Check Google Indexing Status
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Runs every 6 hours (24/7 in the cloud)
+  workflow_dispatch:      # Allows you to trigger it manually from GitHub
+
+permissions:
+  contents: write         # Allows the workflow to commit the "indexed" marker file to turn itself off
+
+jobs:
+  check-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Index Checker
+        run: |
+          python -c '
+          import urllib.request
+          import urllib.parse
+          import json
+          import sys
+          import os
+
+          URL_TO_CHECK = "https://dodi-ui.github.io/Dody/"
+          FORMSPREE_ENDPOINT = "https://formspree.io/f/mqevebvw"
+          MARKER_FILE = ".github/indexed.txt"
+
+          # 1. Check if we already marked this site as indexed
+          if os.path.exists(MARKER_FILE):
+              print("Website was already confirmed as indexed. Skipping check.")
+              sys.exit(0)
+
+          def send_email():
+              payload = {
+                  "name": "GitHub Actions Indexer",
+                  "email": "noreply@github.com",
+                  "subject": "🚀 Your Website is Live on Google!",
+                  "message": f"Great news! Your portfolio website at {URL_TO_CHECK} is now indexed by Google. Checked automatically by GitHub Actions."
+              }
+              try:
+                  data = json.dumps(payload).encode("utf-8")
+                  req = urllib.request.Request(
+                      FORMSPREE_ENDPOINT, 
+                      data=data, 
+                      headers={"Content-Type": "application/json", "Accept": "application/json"}
+                  )
+                  with urllib.request.urlopen(req) as response:
+                      if response.status == 200:
+                          print("Email sent successfully.")
+                      else:
+                          print(f"Failed to send email. Status: {response.status}")
+              except Exception as e:
+                  print(f"Error sending email: {e}")
+
+          def check_search():
+              query = f"site:{URL_TO_CHECK}"
+              search_url = f"https://www.google.com/search?q={urllib.parse.quote(query)}&hl=en"
+              headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+              try:
+                  req = urllib.request.Request(search_url, headers=headers)
+                  with urllib.request.urlopen(req, timeout=10) as response:
+                      html = response.read().decode("utf-8", errors="ignore")
+                      if "did not match any documents" not in html and "did not find any results" not in html:
+                          return True
+              except Exception as e:
+                  print(f"Search query check failed/blocked: {e}")
+              return False
+
+          def check_cache():
+              cache_url = f"https://webcache.googleusercontent.com/search?q=cache:{URL_TO_CHECK}"
+              headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+              try:
+                  req = urllib.request.Request(cache_url, headers=headers)
+                  with urllib.request.urlopen(req, timeout=10) as response:
+                      if response.status == 200:
+                          return True
+              except urllib.error.HTTPError as e:
+                  if e.code == 404:
+                      print("Page not in Google cache yet (404).")
+                  else:
+                      print(f"Cache check HTTP error: {e.code}")
+              except Exception as e:
+                  print(f"Cache check connection error: {e}")
+              return False
+
+          print("Checking Google index status...")
+          is_indexed = check_search() or check_cache()
+          if is_indexed:
+              print("Website is indexed! Triggering notification email...")
+              send_email()
+              # Create marker file
+              os.makedirs(os.path.dirname(MARKER_FILE), exist_ok=True)
+              with open(MARKER_FILE, "w") as f:
+                  f.write("indexed")
+              sys.exit(0)
+          else:
+              print("Website is not indexed yet.")
+              sys.exit(0)
+          '
+
+      - name: Commit marker file if indexed
+        run: |
+          if [ -f .github/indexed.txt ]; then
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add .github/indexed.txt
+            git commit -m "auto-disable check: website is indexed on Google"
+            git push || echo "Push failed, but email was already sent."
+          fi
