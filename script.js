@@ -395,14 +395,10 @@ function applyTranslation(lang) {
   function toggleMenu(force) {
     const open = force !== undefined ? force : !links.classList.contains('open');
     links.classList.toggle('open', open);
-    const bars = $$('span', toggle);
-    if (open) {
-      bars[0].style.transform = 'rotate(45deg) translate(5px,5px)';
-      bars[1].style.opacity = '0';
-      bars[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
-    } else {
-      bars.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
-    }
+    toggle && toggle.classList.toggle('open', open);
+    toggle && toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    // Prevent body scroll while mobile menu is open
+    document.body.style.overflow = open ? 'hidden' : '';
   }
 
   toggle && toggle.addEventListener('click', () => toggleMenu());
@@ -420,6 +416,9 @@ function applyTranslation(lang) {
       });
     }, { rootMargin: '-30% 0px -60% 0px' }).observe(s);
   });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) toggleMenu(false);
+  }, { passive: true });
 })();
 
 /* ══════════════════════════════════════════════
