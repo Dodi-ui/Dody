@@ -47,42 +47,52 @@
   <link rel="apple-touch-icon" sizes="180x180"                href="favicon.png" />
   <meta name="theme-color" content="#08080f" />
 
-  <!-- ═══ JSON-LD STRUCTURED DATA — Person Schema ═══ -->
+  <!-- ═══ JSON-LD STRUCTURED DATA ═══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Daniel Esshak",
-    "alternateName": ["Dani Esshak", "Dany Esshak", "Dodo Esshak", "Dody", "داني اسحق", "دانيال اسحق", "دانيل"],
-    "description": "16-year-old computer science student and AI engineer from Qena, Egypt. Co-founder of Medicyle AI medication redistribution platform. TEDx IT Committee Lead. Pianist and drummer with 13 years of music experience.",
-    "url": "https://dodi-ui.github.io/Dody/",
-    "image": "https://dodi-ui.github.io/Dody/daniel_portrait.png",
-    "sameAs": [
-      "https://github.com/Dodi-ui"
-    ],
-    "jobTitle": "Software Engineer & Co-Founder",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Medicyle"
-    },
-    "birthPlace": {
-      "@type": "Place",
-      "name": "Qena, Egypt"
-    },
-    "nationality": "Egyptian",
-    "knowsLanguage": ["Arabic", "English", "French"],
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Qena Secondary School"
-    },
-    "hasOccupation": [
+    "@graph": [
       {
-        "@type": "Occupation",
-        "name": "Software Engineer"
+        "@type": "WebSite",
+        "@id": "https://dodi-ui.github.io/Dody/#website",
+        "name": "Daniel Esshak",
+        "alternateName": "Dani Esshak | Dody | داني اسحق",
+        "url": "https://dodi-ui.github.io/Dody/",
+        "description": "Portfolio of Daniel Esshak — 16-year-old engineer, musician and builder from Qena, Egypt.",
+        "inLanguage": ["en", "ar"],
+        "publisher": {
+          "@type": "Person",
+          "name": "Daniel Esshak"
+        }
       },
       {
-        "@type": "Occupation",
-        "name": "Musician"
+        "@type": "Person",
+        "@id": "https://dodi-ui.github.io/Dody/#person",
+        "name": "Daniel Esshak",
+        "alternateName": ["Dani Esshak", "Dany Esshak", "Dodo Esshak", "Dody", "داني اسحق", "دانيال اسحق", "دانيل"],
+        "description": "16-year-old computer science student and AI engineer from Qena, Egypt. Co-founder of Medicyle AI. TEDx IT Committee Lead. Pianist and drummer with 13 years of music.",
+        "url": "https://dodi-ui.github.io/Dody/",
+        "image": "https://dodi-ui.github.io/Dody/daniel_portrait.png",
+        "sameAs": [
+          "https://github.com/Dodi-ui",
+          "https://www.instagram.com/dani_esshak/",
+          "https://medicycle.me"
+        ],
+        "jobTitle": "Software Engineer & Co-Founder",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Medicyle"
+        },
+        "birthPlace": {
+          "@type": "Place",
+          "name": "Qena, Egypt"
+        },
+        "nationality": "Egyptian",
+        "knowsLanguage": ["Arabic", "English", "French"],
+        "hasOccupation": [
+          { "@type": "Occupation", "name": "Software Engineer" },
+          { "@type": "Occupation", "name": "Musician" }
+        ]
       }
     ]
   }
