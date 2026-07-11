@@ -21,12 +21,12 @@ const LANG = {
     'hero.tagline.0':'Engineer','hero.tagline.1':'Musician','hero.tagline.2':'Builder',
     'hero.sub':'Computer Science & AI · 13 Years of Music · Qena, Egypt',
     'hero.cta.work':'View My Work','hero.cta.contact':'Get in Touch',
-    'about.manifesto':'I\'m a technologist and musician who cares about <em>making tools that give people back their time</em> — connecting cultures through sound, and architecting paths forward when resources are lean.',
-    'about.value.0':'RESILIENT','about.value.1':'RESOURCEFUL','about.value.2':'RHYTHMIC','about.value.3':'RIGOROUS',
+    'about.manifesto':'I\'m a technologist and musician who cares about <em>making tools that give people back their time</em>, connecting cultures through sound, and architecting paths forward when resources are lean.',
+    'about.value.0':'RIGOROUS','about.value.1':'RESOURCEFUL','about.value.2':'RHYTHMIC','about.value.3':'RESILIENT',
     'about.stat.gpa':'GPA','about.stat.music':'Music','about.stat.code':'Lines of Code','about.stat.lives':'Lives Reached',
     'about.tw.0':'Growing up in Qena, Upper Egypt, I built my path with two classmates, one laptop, and lessons downloaded overnight through a phone hotspot. Limitations became my creative curriculum.',
-    'about.tw.1':'My parents — a veterinarian with 21 years of government service and a pulmonologist who built her own clinic from scratch — showed me that leadership is not about volume. It\'s about showing up, quietly, at the exact second someone needs you.',
-    'about.tw.2':'Today I write code, play drums for thousands, and lead teams through crises — all from the same philosophy: "I don\'t need the solo. I want the song to work."',
+    'about.tw.1':'My parents: a veterinarian with 21 years of government service and a pulmonologist who built her own clinic from scratch. They showed me that leadership is not about volume. It\'s about showing up, quietly, at the exact second someone needs you.',
+    'about.tw.2':'Today I write code, play drums for thousands, and lead teams through crises. All from the same philosophy: "I don\'t need the solo. I want the song to work."',
     'story.label':'The Architecture of Resilience',
     'story.title':'From Qena<br/>to the World',
     'story.quote':'"Resilience is not merely surviving; it is architecting a path forward when resources are lean."',
@@ -35,14 +35,14 @@ const LANG = {
     'story.tl.1.title':'Lockdown → 600+ hours of learning',
     'story.tl.1.desc':'5–6 hours daily self-study. 15 online courses. 70+ coding challenges. 1,000+ hours on piano.',
     'story.tl.2.title':'Built platforms from scratch',
-    'story.tl.2.desc':'No marketing team, no studio, no incubator — just discipline, a laptop, and a vision.',
+    'story.tl.2.desc':'No marketing team, no studio, no incubator: just discipline, a laptop, and a vision.',
     'story.tl.3.title':'12,000+ handwritten exercises',
-    'story.tl.3.desc':'Across five Cambridge subjects — averaging 96% without a tutor.',
+    'story.tl.3.desc':'Across five Cambridge subjects, averaging 96% without a tutor.',
     'projects.label':'Technical Stewardship','projects.title':'Selected Work','projects.sub':'Things that shouldn\'t work but do.',
     'projects.medicyle.role':'Co-Founder & Lead Developer',
     'projects.medicyle.desc':'AI-powered medication redistribution platform. Simplified pharmacist handoffs. Reduced waste by 30%.',
     'projects.metric.lines':'Lines of code','projects.metric.users':'Users tested','projects.metric.waste':'Waste cut',
-    'projects.zoom.name':'Zoom Attendance Analyzer','projects.zoom.role':'Developer — Personal Project',
+    'projects.zoom.name':'Zoom Attendance Analyzer','projects.zoom.role':'Developer: Personal Project',
     'projects.zoom.desc':'Scrapes attendance, flags absences, resolves duplicates. Built for a teacher drowning in logs.',
     'projects.zoom.metric':'Hours saved/year','projects.sunbright.name':'Sun Bright Marketplace',
     'projects.sunbright.role':'Full Stack Developer',
@@ -50,7 +50,7 @@ const LANG = {
     'projects.tedx.role':'Head IT Committee',
     'projects.tedx.desc':'Led 16-member IT team. 2 websites, 2,000+ registrations. 70% efficiency gain.',
     'projects.gouda.name':'Dr. Gouda\'s Math Portal','projects.gouda.role':'Designer & Developer',
-    'projects.gouda.desc':'Educational portal for a mathematics teacher — clean, accessible, beautiful.',
+    'projects.gouda.desc':'Educational portal for a mathematics teacher: clean, accessible, beautiful.',
     'music.label':'The Rhythm of Discipline','music.title':'13 Years of Rhythm',
     'music.quote':'"The drummer is the unseen leader. If I lose focus, the entire performance collapses."',
     'music.piano.title':'Piano','music.drums.title':'Drums','music.prod.title':'Production',
@@ -62,22 +62,22 @@ const LANG = {
     'music.prod.f2':'Digital mastering','music.m0':'SoundCloud Streams','music.m1':'Total Audience',
     'music.m2':'Hymns Produced','music.m3':'Live Services',
     'exp.label':'Navigational Leadership','exp.title':'Experience',
-    'exp.0.role':'Co-Founder & Lead Developer','exp.0.desc':'"Building AI that redistributes hope."',
-    'exp.1.role':'Head IT Committee','exp.1.desc':'"Managing the digital heartbeat of ideas."',
-    'exp.2.role':'Full Stack Developer','exp.2.desc':'"3,000+ lines, 60+ users, 40% trade boost."',
-    'exp.3.role':'Worship Musician','exp.3.desc':'"500+ services, 30+ cities."',
-    'exp.4.role':'Math Club Leader','exp.4.desc':'"Led 20+ peers, improved scores 20%."',
-    'exp.5.role':'Community Volunteer','exp.5.desc':'"70+ homeless fed, 100+ elderly supported."',
+    'exp.0.role':'Co-Founder & Lead Developer','exp.0.desc':'Building AI that redistributes hope.',
+    'exp.1.role':'Head IT Committee','exp.1.desc':'Managing the digital heartbeat of ideas.',
+    'exp.2.role':'Full Stack Developer','exp.2.desc':'3,000+ lines, 60+ users, 40% trade boost.',
+    'exp.3.role':'Worship Musician','exp.3.desc':'500+ services, 30+ cities.',
+    'exp.4.role':'Math Club Leader','exp.4.desc':'Led 20+ peers, improved scores 20%.',
+    'exp.5.role':'Community Volunteer','exp.5.desc':'70+ homeless fed, 100+ elderly supported.',
     'honors.label':'Recognition','honors.title':'Honors & Awards',
     'testi.label':'Voices of Trust','testi.title':'What They Say',
     'testi.q0':'Few students manage to leave such a consistent impression, but Dani has always stood out for his curiosity, determination, and resilience.',
     'testi.n0':'School Principal',
-    'testi.q1':'Daniel has consistently redefined student leadership through a unique blend of technical expertise, grit, and remarkable empathy.',
-    'testi.q2':'His ability to bridge the age gap — maintaining technical authority among older peers — speaks to emotional intelligence rarely seen in high school.',
+    'testi.q1':'Daniel has consistently redefined student leadership within our community through a unique blend of technical expertise, grit, and remarkable empathy.',
+    'testi.q2':'His ability to bridge the age gap, maintaining technical authority among older peers, speaks to emotional intelligence rarely seen in high school.',
     'testi.q3':'Dani does not boast about his achievements; he lets his actions speak. This quiet confidence will serve him well.',
     'edu.label':'Credentials','edu.title':'Education',
-    'edu.grad':'Expected Graduation: June 2026 (Early — Grade 11)',
-    'edu.lang0':'Arabic — Native','edu.lang1':'English — C1','edu.lang2':'French — Conv.',
+    'edu.grad':'Expected Graduation: June 2026 (Early, Grade 11)',
+    'edu.lang0':'Arabic: Native','edu.lang1':'English: C1','edu.lang2':'French: Conv.',
     'edu.applying':'Applying Fall 2026',
     'edu.s0':'Mathematics','edu.s1':'Biology','edu.s2':'Chemistry','edu.s3':'Physics','edu.s4':'Arabic',
     'contact.label':'Let\'s Connect','contact.title':'The Song Needs<br/>More Voices',
@@ -93,7 +93,7 @@ const LANG = {
     'qena.quote':'"Every limitation Qena gave me, I turned into an architecture."',
     'qena.fact.population':'Population','qena.fact.cairo':'From Cairo',
     'qena.fact.history':'Years of History','qena.fact.builder':'Young Architect',
-    'qena.note':'Where the Nile bends south — and a builder was born.',
+    'qena.note':'Where the Nile bends south, and a builder was born.',
     'footer.tagline':'Engineer. Musician. Builder.',
     'footer.seek':'Currently seeking Fall 2026 university opportunities',
     'footer.quote':'"The rhythm will find you."',
@@ -108,7 +108,7 @@ const LANG = {
     '_hint.experience':   'See his achievements ↓',
     '_hint.honors':       'Read what they say ↓',
     '_hint.testimonials': 'Check his education ↓',
-    '_hint.education':    'Contact Daniel — build together ↓',
+    '_hint.education':    'Contact Daniel, build together ↓',
   },
 
   ar: {
@@ -118,12 +118,12 @@ const LANG = {
     'hero.tagline.0':'مهندس','hero.tagline.1':'موسيقي','hero.tagline.2':'بانٍ',
     'hero.sub':'علوم الحاسوب والذكاء الاصطناعي · ١٣ عاماً من الموسيقى · قنا، مصر',
     'hero.cta.work':'أعمالي','hero.cta.contact':'تواصل معي',
-    'about.manifesto':'أنا مهندس برمجيات وموسيقي مهتم بـ<em>بناء أدوات تُعيد للناس وقتهم</em> — أربط الثقافات من خلال الصوت، وأرسم طرقاً للأمام حين تشحّ الموارد.',
-    'about.value.0':'صامد','about.value.1':'مبدع','about.value.2':'إيقاعي','about.value.3':'دقيق',
+    'about.manifesto':'أنا مهندس برمجيات وموسيقي مهتم بـ<em>بناء أدوات تُعيد للناس وقتهم</em>، أربط الثقافات من خلال الصوت، وأرسم طرقاً للأمام حين تشحّ الموارد.',
+    'about.value.0':'دقيق','about.value.1':'مبدع','about.value.2':'إيقاعي','about.value.3':'صامد',
     'about.stat.gpa':'المعدل','about.stat.music':'موسيقى','about.stat.code':'سطور كود','about.stat.lives':'حياة أثّرت',
     'about.tw.0':'نشأتُ في قنا بصعيد مصر، وبنيتُ مساري مع زميلَين، وحاسوب واحد، ودروس تُحمَّل ليلاً عبر هاتف. القيود صارت منهجي الإبداعي.',
-    'about.tw.1':'والداي — طبيب بيطري بـ٢١ عاماً في الخدمة الحكومية، وطبيبة رئة بنت عيادتها من الصفر — علّماني أن القيادة ليست في رفع الصوت، بل في الحضور الهادئ في اللحظة المناسبة.',
-    'about.tw.2':'اليوم أكتب الكود، وأعزف الطبول لآلاف، وأقود فِرقاً في الأزمات — كل ذلك من فلسفة واحدة: "لا أريد الجزء المنفرد. أريد أن تنجح الأغنية."',
+    'about.tw.1':'والداي: طبيب بيطري بـ٢١ عاماً في الخدمة الحكومية، وطبيبة رئة بنت عيادتها من الصثفر. علّماني أن القيادة ليست في رفع الصوت، بل في الحضور الهادئ في اللحظة المناسبة.',
+    'about.tw.2':'اليوم أكتب الكود، وأعزف الطبول لآلاف، وأقود فِرقاً في الأزمات. كل ذلك من فلسفة واحدة: "لا أريد الجزء المنفرد. أريد أن تنجح الأغنية."',
     'story.label':'هندسة الصمود','story.title':'من قنا<br/>إلى العالم',
     'story.quote':'"الصمود ليس مجرد البقاء؛ بل هو رسم طريق للأمام حين تشحّ الموارد."',
     'story.tl.0.title':'لا برامج تقنية محلية',
@@ -131,14 +131,14 @@ const LANG = {
     'story.tl.1.title':'الإغلاق ← أكثر من ٦٠٠ ساعة تعلم',
     'story.tl.1.desc':'٥-٦ ساعات دراسة ذاتية يومياً. ١٥ دورة إلكترونية. أكثر من ١٠٠٠ ساعة على البيانو.',
     'story.tl.2.title':'بناء منصات من الصفر',
-    'story.tl.2.desc':'بلا فريق تسويق ولا استوديو ولا حاضنة — فقط انضباط وحاسوب ورؤية.',
+    'story.tl.2.desc':'بلا فريق تسويق ولا استوديو ولا حاضنة: فقط انضباط وحاسوب ورؤية.',
     'story.tl.3.title':'أكثر من ١٢٠٠٠ تمرين بخط اليد',
     'story.tl.3.desc':'في خمس مواد كامبريدج بمعدل ٩٦٪ بلا مدرس خاص.',
     'projects.label':'الإشراف التقني','projects.title':'أبرز الأعمال','projects.sub':'أشياء لم تُبنَ لتنجح — لكنها تنجح.',
     'projects.medicyle.role':'مؤسس مشارك ومطوّر رئيسي',
     'projects.medicyle.desc':'منصة إعادة توزيع الدواء بالذكاء الاصطناعي. تُبسّط تسليم الصيدليات وتُقلل الهدر بنسبة ٣٠٪.',
     'projects.metric.lines':'سطر كود','projects.metric.users':'مستخدم جرّبه','projects.metric.waste':'تقليل الهدر',
-    'projects.zoom.name':'محلّل حضور زووم','projects.zoom.role':'مطوّر — مشروع شخصي',
+    'projects.zoom.name':'محلّل حضور زووم','projects.zoom.role':'مطوّر: مشروع شخصي',
     'projects.zoom.desc':'يسحب بيانات الحضور ويُبلّغ عن الغياب. بُني لمعلم غارق في السجلات.',
     'projects.zoom.metric':'ساعة مُوفَّرة/سنة','projects.sunbright.name':'سوق صن برايت',
     'projects.sunbright.role':'مطوّر متكامل',
@@ -146,7 +146,7 @@ const LANG = {
     'projects.tedx.role':'رئيس لجنة تقنية المعلومات',
     'projects.tedx.desc':'قيادة فريق IT من ١٦ عضواً. موقعان، أكثر من ٢٠٠٠ تسجيل.',
     'projects.gouda.name':'بوابة الرياضيات','projects.gouda.role':'مصمم ومطوّر',
-    'projects.gouda.desc':'بوابة تعليمية لمدرس رياضيات — نظيفة، سهلة الوصول، جميلة التصميم.',
+    'projects.gouda.desc':'بوابة تعليمية لمدرس رياضيات: نظيفة، سهلة الوصول، جميلة التصميم.',
     'music.label':'إيقاع الانضباط','music.title':'١٣ عاماً من الإيقاع',
     'music.quote':'"الطبّال هو القائد الخفيّ. إن فقدتُ تركيزي، انهار العرض كلّه."',
     'music.piano.title':'بيانو','music.drums.title':'طبول','music.prod.title':'إنتاج موسيقي',
@@ -158,12 +158,12 @@ const LANG = {
     'music.prod.f2':'إتقان رقمي وتوليف صوتي','music.m0':'استماعة SoundCloud','music.m1':'إجمالي الجمهور',
     'music.m2':'ترنيمة مُنتَجة','music.m3':'خدمة مباشرة',
     'exp.label':'القيادة والخبرات','exp.title':'الخبرات',
-    'exp.0.role':'مؤسس مشارك ومطوّر رئيسي','exp.0.desc':'"بناء ذكاء اصطناعي يُعيد توزيع الأمل."',
-    'exp.1.role':'رئيس لجنة تقنية المعلومات','exp.1.desc':'"إدارة النبضة الرقمية للأفكار."',
-    'exp.2.role':'مطوّر متكامل','exp.2.desc':'"٣٠٠٠+ سطر، ٦٠+ مستخدم، ارتفاع ٤٠٪."',
-    'exp.3.role':'موسيقي عبادة','exp.3.desc':'"٥٠٠+ خدمة، ٣٠+ مدينة."',
-    'exp.4.role':'قائد نادي الرياضيات','exp.4.desc':'"قيادة ٢٠+ زميل، تحسين ٢٠٪."',
-    'exp.5.role':'متطوع مجتمعي','exp.5.desc':'"٧٠+ شخص تمّ إطعامه، ١٠٠+ مسنّ."',
+    'exp.0.role':'مؤسس مشارك ومطوّر رئيسي','exp.0.desc':'بناء ذكاء اصطناعي يُعيد توزيع الأمل.',
+    'exp.1.role':'رئيس لجنة تقنية المعلومات','exp.1.desc':'إدارة النبضة الرقمية للأفكار.',
+    'exp.2.role':'مطوّر متكامل','exp.2.desc':'٣٠٠٠+ سطر، ٦٠+ مستخدم، ارتفاع ٤٠٪.',
+    'exp.3.role':'موسيقي عبادة','exp.3.desc':'٥٠٠+ خدمة، ٣٠+ مدينة.',
+    'exp.4.role':'قائد نادي الرياضيات','exp.4.desc':'قيادة ٢٠+ زميل، تحسين ٢٠٪.',
+    'exp.5.role':'متطوع مجتمعي','exp.5.desc':'٧٠+ شخص تمّ إطعامه، ١٠٠+ مسنّ.',
     'honors.label':'التكريمات','honors.title':'الجوائز والتكريمات',
     'testi.label':'أصوات الثقة','testi.title':'ماذا يقولون',
     'testi.q0':'قلّة من الطلاب يتركون انطباعاً متسقاً عبر السنين، لكن داني تميّز دائماً بفضوله وعزيمته وصموده.',
@@ -172,8 +172,8 @@ const LANG = {
     'testi.q2':'قدرته على ردم الهوّة العمرية تدلّ على ذكاء عاطفي ونضج نادرَين في طالب بالمرحلة الثانوية.',
     'testi.q3':'لا يتباهى داني بإنجازاته؛ يدع أفعاله تتكلم. هذه الثقة الهادئة ستخدمه طويلاً.',
     'edu.label':'الشهادات','edu.title':'التعليم',
-    'edu.grad':'التخرج المتوقع: يونيو ٢٠٢٦ (مبكر — الصف الحادي عشر)',
-    'edu.lang0':'العربية — اللغة الأم','edu.lang1':'الإنجليزية — مستوى C1','edu.lang2':'الفرنسية — محادثة',
+    'edu.grad':'التخرج المتوقع: يونيو ٢٠٢٦ (مبكر، الصف الحادي عشر)',
+    'edu.lang0':'العربية: اللغة الأم','edu.lang1':'الإنجليزية: مستوى C1','edu.lang2':'الفرنسية: محادثة',
     'edu.applying':'التقديم خريف ٢٠٢٦',
     'edu.s0':'الرياضيات','edu.s1':'الأحياء','edu.s2':'الكيمياء','edu.s3':'الفيزياء','edu.s4':'اللغة العربية',
     'contact.label':'تواصل معي','contact.title':'الأغنية تحتاج<br/>مزيداً من الأصوات',
@@ -189,11 +189,11 @@ const LANG = {
     'qena.quote':'"كل قيد أعطتني إيّاه قنا، حوّلتُه إلى هندسة."',
     'qena.fact.population':'النفوس','qena.fact.cairo':'من القاهرة',
     'qena.fact.history':'عام من التاريخ','qena.fact.builder':'بانٍ شاب',
-    'qena.note':'حيث ينحني النيل جنوباً — ويولد البانون.',
+    'qena.note':'حيث ينحني النيل جنوباً، ويولد البانون.',
     'footer.tagline':'مهندس. موسيقي. بانٍ.',
     'footer.seek':'أبحث عن فرص جامعية لخريف ٢٠٢٦',
     'footer.quote':'"الإيقاع سيجدك."',
-
+ 
     '_hint.hero':         'اكتشف قصته ↓',
     '_hint.about':        'شاهد من أين بدأ ↓',
     '_hint.qena':         'استعرض مشاريعه ↓',
@@ -203,7 +203,7 @@ const LANG = {
     '_hint.experience':   'اقرأ إنجازاته ↓',
     '_hint.honors':       'ماذا يقولون ↓',
     '_hint.testimonials': 'تعليمه ↓',
-    '_hint.education':    'تواصل مع دانيال — ابنوا معاً ↓',
+    '_hint.education':    'تواصل مع دانيال، ابنوا معاً ↓',
   }
 };
 
@@ -307,6 +307,40 @@ function applyTranslation(lang) {
 })();
 
 /* ══════════════════════════════════════════════
+   5. LANGUAGE DROPDOWN
+══════════════════════════════════════════════ */
+(function initTranslate() {
+  const dropdown    = $('#langDropdown');
+  const trigger     = $('#langTrigger');
+  const menu        = $('#langMenu');
+  const triggerLbl  = $('#langTriggerLabel');
+  if (!dropdown || !trigger || !menu) return;
+
+  function openMenu()  { menu.classList.add('open');  trigger.setAttribute('aria-expanded','true'); }
+  function closeMenu() { menu.classList.remove('open'); trigger.setAttribute('aria-expanded','false'); }
+  function toggleMenu(){ menu.classList.contains('open') ? closeMenu() : openMenu(); }
+
+  trigger.addEventListener('click', e => { e.stopPropagation(); toggleMenu(); });
+  document.addEventListener('click', () => closeMenu());
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+  $$('.lang-option', menu).forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const lang = btn.dataset.lang;
+      applyTranslation(lang);
+      updateScrollHint(true);
+      // Update active class
+      $$('.lang-option', menu).forEach(b => b.classList.remove('lang-option--active'));
+      btn.classList.add('lang-option--active');
+      // Update trigger label
+      if (triggerLbl) triggerLbl.textContent = lang === 'ar' ? 'ع' : 'EN';
+      closeMenu();
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════════
    2. CURSOR  (disabled on touch devices)
 ══════════════════════════════════════════════ */
 (function initCursor() {
@@ -407,18 +441,7 @@ function applyTranslation(lang) {
   });
 })();
 
-/* ══════════════════════════════════════════════
-   5. TRANSLATE BUTTON
-══════════════════════════════════════════════ */
-(function initTranslate() {
-  const btn = $('#translateBtn');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    applyTranslation(currentLang === 'en' ? 'ar' : 'en');
-    // Update scroll hint text for current section
-    updateScrollHint(true);
-  });
-})();
+
 
 /* ══════════════════════════════════════════════
    6. SCROLL HINT
