@@ -795,8 +795,14 @@ body.light-mode .scroll-hint { background: rgba(250,248,244,.92); border-color: 
 body.light-mode .scroll-hint-text { color: var(--muted); }
 
 /* ─── RTL overrides ───────────────────────── */
-html[dir="rtl"] body { font-family: var(--font-arabic), var(--font-sans); }
+html[dir="rtl"] body { font-family: var(--font-arabic), var(--font-sans); direction: rtl; }
+
+/* Cursor — in RTL the dot sits on the right of the follower ring */
+html[dir="rtl"] .cursor-follower { transform: translate(-30%, -50%); }
+
 html[dir="rtl"] .nav-links { direction: rtl; }
+html[dir="rtl"] .nav-link::after { left: auto; right: 0; }
+html[dir="rtl"] .hero-content { flex-direction: row-reverse; }
 html[dir="rtl"] .hero-text { text-align: right; }
 html[dir="rtl"] .hero-tagline { flex-direction: row-reverse; }
 html[dir="rtl"] .hero-eyebrow { flex-direction: row-reverse; }
@@ -805,20 +811,29 @@ html[dir="rtl"] .about-values { direction: rtl; }
 html[dir="rtl"] .value-item { border-right: none; border-left: 1px solid var(--border); }
 html[dir="rtl"] .value-item:first-child { border-left: none; }
 html[dir="rtl"] .value-line { transform-origin: right; }
+html[dir="rtl"] .about-body { direction: rtl; }
 html[dir="rtl"] .qena-body { direction: rtl; }
 html[dir="rtl"] .qena-quote { border-left: none; border-right: 2px solid rgba(201,169,110,.4); padding-left: 0; padding-right: 18px; }
+html[dir="rtl"] .story-grid { direction: rtl; }
 html[dir="rtl"] .story-quote { border-left: none; border-right: 2px solid rgba(201,169,110,.4); padding-left: 0; padding-right: 20px; }
 html[dir="rtl"] .exp-item { direction: rtl; }
 html[dir="rtl"] .exp-year-col { text-align: left; padding-right: 0; padding-left: 16px; }
 html[dir="rtl"] .exp-card { margin: 6px 16px 6px 0; }
 html[dir="rtl"] .exp-card:hover { transform: translate3d(-5px,0,0); }
+html[dir="rtl"] .honors-grid { direction: rtl; }
+html[dir="rtl"] .projects-grid { direction: rtl; }
 html[dir="rtl"] .contact-layout { direction: rtl; }
+html[dir="rtl"] .contact-info { text-align: right; }
+html[dir="rtl"] .ci-icon { margin-right: 0; margin-left: 12px; }
 html[dir="rtl"] .footer-inner { direction: rtl; }
 html[dir="rtl"] .footer-right { text-align: left; align-items: flex-start; }
 html[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
 html[dir="rtl"] .section-header { direction: rtl; }
+html[dir="rtl"] .section-label::before { margin-right: 0; margin-left: 10px; }
 html[dir="rtl"] .tw-para { direction: rtl; text-align: right; font-family: var(--font-arabic); font-size: 1.02rem; line-height: 2; }
 html[dir="rtl"] .about-manifesto { direction: rtl; text-align: right; font-family: var(--font-arabic); }
+html[dir="rtl"] .scroll-hint { right: auto; left: 32px; }
+html[dir="rtl"] .lang-menu { left: 0; right: auto; }
 
 /* ─── LIGHT MODE ──────────────────────────── */
 body.light-mode {
@@ -963,6 +978,10 @@ body.light-mode ::-webkit-scrollbar-thumb { background: rgba(160,120,48,.4); }
   .music-metrics { grid-template-columns: repeat(2,1fr); }
   .music-metric:nth-child(2) { border-right: none; }
   .music-metric:nth-child(3) { border-top: 1px solid rgba(255,255,255,.05); }
+}
+/* Hide scroll-indicator on tablets where it overlaps the hero buttons */
+@media (max-width: 1024px) {
+  .scroll-indicator { display: none; }
 }
 @media (max-width: 900px) {
   :root { --nav-h: 60px; }
